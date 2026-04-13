@@ -137,3 +137,25 @@ find inhere/ \! -executable -type f -size 1033c -exec head {} \;
 `HWasnPhtq9AVKe0dmk45nxy20cvUa6EG`
 
 </details>  
+
+## Level 7
+
+
+**Описание:**  
+`Пароль для перехода на следующий уровень хранится где-то на сервере и обладает всеми следующими свойствами:`  
+
+- `принадлежит пользователю bandit7`  
+- `принадлежит группе bandit6`  
+- `размер 33 байта`  
+
+<details>
+    <summary>Решение</summary>  
+
+```
+find / -type f -size 33c -group bandit6 -user bandit7 -exec head '{}' \; 2>&1 | grep -v "find"
+```  
+
+**Результат**:  
+`morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj`
+
+</details> 
