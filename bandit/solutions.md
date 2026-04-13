@@ -195,3 +195,21 @@ awk '{print $1}' data.txt | sort | uniq -c | sort -nk 1 | head -n 1 | awk '{prin
 `4CKMh1JI91bUIZZPXDqGanal4xvAg0JM`
 
 </details> 
+
+## Level 10
+
+
+**Описание:**  
+`Пароль для перехода на следующий уровень хранится в файле data.txt в одной из нескольких удобочитаемых строк, перед которыми стоит несколько символов «=».`  
+
+<details>
+    <summary>Решение</summary>  
+
+```
+strings -d data.txt | grep == | awk '{print $2}' | tail -n 1
+```  
+
+**Результат**:  
+`FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey`
+
+</details> 
