@@ -252,3 +252,46 @@ cat data.txt | tr '[A-Za-z]' '[N-ZA-Mn-za-m]'
 `7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4`
 
 </details> 
+
+## Level 13
+
+
+**Описание:**  
+`Пароль для перехода на следующий уровень хранится в файле data.txt, который представляет собой шестнадцатеричный дамп файла, многократно сжатого. Для этого уровня может быть полезно создать в /tmp каталог, в котором вы сможете работать. Используйте команду mkdir, присвоив ей трудно угадываемое имя. А еще лучше используйте команду mktemp -d. Затем скопируйте файл datafile с помощью cp и переименуйте его с помощью mv (прочитайте справочные страницы!).`  
+
+*В какой-то момент я думал, что иду по второму кругу. Нужно было выбирать именя для файлов получше.*
+
+<details>
+    <summary>Решение</summary>  
+
+```
+    cd $(mktemp -d)    
+    cp ~/data.txt .
+    head data.txt
+    xxd -r data.txt > output
+    file output
+    mv output output.gz
+    gunzip output.gz
+    file output
+    bunzip output
+    file output.out
+    mv output.out output.gz
+    gunzip output.gz
+    mv output output.tar
+    tar -xvf output.tar
+    file data5.bin
+    mv data5.bin output.tar
+    tar -xvf output.tar
+    mv  data6.bin output.bz2
+    bunzip2 output.bz2
+    file output
+    mv output output.tar
+    tar -xvf output.tar
+    mv data8.bin output.gz
+    gunzip output.gz
+    file output
+    cat output
+```  
+
+**Результат**:  
+`dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr`
