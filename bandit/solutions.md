@@ -159,3 +159,21 @@ find / -type f -size 33c -group bandit6 -user bandit7 -exec head '{}' \; 2>&1 | 
 `morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj`
 
 </details> 
+
+## Level 8
+
+
+**Описание:**  
+`Пароль для перехода на следующий уровень хранится в файле data.txt рядом со словом millionth`  
+
+<details>
+    <summary>Решение</summary>  
+
+```
+cat data.txt | grep -e "millionth" | awk '{print $2}'
+```  
+
+**Результат**:  
+`dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc`
+
+</details> 
