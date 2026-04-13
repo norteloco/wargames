@@ -177,3 +177,21 @@ cat data.txt | grep -e "millionth" | awk '{print $2}'
 `dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc`
 
 </details> 
+
+## Level 9
+
+
+**Описание:**  
+`Пароль для перехода на следующий уровень хранится в файле data.txt и представляет собой единственную строку текста, которая встречается только один раз.`  
+
+<details>
+    <summary>Решение</summary>  
+
+```
+awk '{print $1}' data.txt | sort | uniq -c | sort -nk 1 | head -n 1 | awk '{print $2}'
+```  
+
+**Результат**:  
+`4CKMh1JI91bUIZZPXDqGanal4xvAg0JM`
+
+</details> 
