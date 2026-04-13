@@ -213,3 +213,21 @@ strings -d data.txt | grep == | awk '{print $2}' | tail -n 1
 `FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey`
 
 </details> 
+
+## Level 11
+
+
+**Описание:**  
+`Пароль для перехода на следующий уровень хранится в файле data.txt, который содержит данные в кодировке base64.`  
+
+<details>
+    <summary>Решение</summary>  
+
+```
+cat data.txt | base64 -d | awk '{print $4}'
+```  
+
+**Результат**:  
+`dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr`
+
+</details> 
