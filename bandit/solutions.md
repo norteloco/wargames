@@ -357,3 +357,28 @@ openssl s_client -connect localhost:30001
 `kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx`
 
 </details> 
+
+## Level 17
+
+**Описание:**  
+`Учетные данные для следующего уровня можно получить, отправив пароль текущего уровня на порт localhost в диапазоне от 31000 до 32000. Сначала выясните, на каких из этих портов работает сервер. Затем определите, какие из них поддерживают протокол SSL/TLS, а какие нет. Только один сервер выдаст вам следующие учетные данные, остальные просто отправят вам то, что вы им отправили.`  
+
+<details>
+    <summary>Решение</summary>  
+
+```
+nc -zv localhost 31000-32000 2>&1 | grep succeeded | awk '{print $5}'
+  
+openssl s_client -nocommands -connect localhost:31046
+openssl s_client -nocommands -connect localhost:31518
+openssl s_client -nocommands -connect localhost:31691
+openssl s_client -nocommands -connect localhost:31790
+openssl s_client -nocommands -connect localhost:31960
+```  
+
+**Результат**:  
+```
+RSA PRIVATE KEY
+```
+
+</details> 
