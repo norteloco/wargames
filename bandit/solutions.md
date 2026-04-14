@@ -473,3 +473,23 @@ head /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
 `tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q`
 
 </details> 
+
+## Level 23
+
+**Описание:**  
+`Программа автоматически запускается через равные промежутки времени с помощью cron — планировщика заданий по расписанию. Найдите в /etc/cron.d/ конфигурацию и посмотрите, какая команда выполняется.`  
+
+
+<details>
+    <summary>Решение</summary>  
+
+```
+head /etc/cron.d/cronjob_bandit23
+cat /usr/bin/cronjob_bandit23.sh 
+cat /tmp/$(echo I am user bandit23 | md5sum | cut -d ' ' -f 1)
+```  
+
+**Результат**:  
+`0Zf11ioIjMVN551jX3CmStKLYqjk54Ga`
+
+</details> 
