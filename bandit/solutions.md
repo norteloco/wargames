@@ -382,3 +382,20 @@ RSA PRIVATE KEY
 ```
 
 </details> 
+
+## Level 18
+
+**Описание:**  
+`В домашней директории есть два файла: passwords.old и passwords.new. Пароль для следующего уровня находится в файле passwords.new, и это единственная строка, которая была изменена в файле passwords.old по сравнению с passwords.new`  
+
+<details>
+    <summary>Решение</summary>  
+
+```
+diff passwords.old passwords.new | tail -n 1 | awk '{print $2}'
+```  
+
+**Результат**:  
+`kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx`
+
+</details> 
