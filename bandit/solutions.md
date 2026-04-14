@@ -396,6 +396,25 @@ diff passwords.old passwords.new | tail -n 1 | awk '{print $2}'
 ```  
 
 **Результат**:  
-`kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx`
+`x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO`
 
 </details> 
+
+## Level 19
+
+**Описание:**  
+`Пароль для перехода на следующий уровень хранится в файле readme в домашней директории. К сожалению, кто-то изменил файл .bashrc, чтобы вы выходили из системы при входе через SSH.`  
+
+
+<details>
+    <summary>Решение</summary>  
+
+```
+ssh bandit18@bandit.labs.overthewire.org -p 2220 'head readme'
+```  
+
+**Результат**:  
+`cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8`
+
+</details> 
+
