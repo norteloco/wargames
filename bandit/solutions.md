@@ -339,3 +339,21 @@ nc localhost 30000 < /etc/bandit_pass/bandit14
 `8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo`
 
 </details> 
+
+## Level 16
+
+**Описание:**  
+`Пароль для перехода на следующий уровень можно получить, отправив пароль текущего уровня на порт 30001 на локальном хосте с использованием шифрования SSL/TLS.`  
+
+<details>
+    <summary>Решение</summary>  
+
+```
+openssl s_client -connect localhost:30001
+<password>
+```  
+
+**Результат**:  
+`kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx`
+
+</details> 
