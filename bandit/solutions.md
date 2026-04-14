@@ -418,3 +418,20 @@ ssh bandit18@bandit.labs.overthewire.org -p 2220 'head readme'
 
 </details> 
 
+## Level 20
+
+**Описание:**  
+`Чтобы получить доступ к следующему уровню, вам нужно использовать бинарный файл setuid в домашней директории. Запустите его без аргументов, чтобы узнать, как им пользоваться. Пароль для этого уровня можно найти в обычном месте (/etc/bandit_pass) после запуска бинарного файла setuid.`  
+
+
+<details>
+    <summary>Решение</summary>  
+
+```
+./bandit20-do cat /etc/bandit_pass/bandit20
+```  
+
+**Результат**:  
+`0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO`
+
+</details> 
