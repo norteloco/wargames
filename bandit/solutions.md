@@ -453,3 +453,23 @@ cat /etc/bandit_pass/bandit20 | nc -lvp 3000 & ./suconnect 3000
 `EeoULMCra2q0dSkYj561DX7s1CpBuOBt`
 
 </details> 
+
+## Level 22
+
+**Описание:**  
+`Программа автоматически запускается через равные промежутки времени с помощью cron — планировщика заданий по расписанию. Найдите в /etc/cron.d/ конфигурацию и посмотрите, какая команда выполняется.`  
+
+
+<details>
+    <summary>Решение</summary>  
+
+```
+head /etc/cron.d/cronjob_bandit22
+head /usr/bin/cronjob_bandit22.sh 
+head /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+```  
+
+**Результат**:  
+`tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q`
+
+</details> 
