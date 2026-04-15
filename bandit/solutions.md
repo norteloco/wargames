@@ -580,3 +580,21 @@ ls -la
 `upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB`
 
 </details> 
+
+## Level 28
+
+**Описание:**  
+`Репозиторий git находится по адресу ssh://bandit27-git@bandit.labs.overthewire.org/home/bandit27-git/repo через порт 2220. Пароль для пользователя bandit27-git такой же, как и для пользователя bandit27`
+
+<details>
+    <summary>Решение</summary>  
+
+```
+git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo
+cat repo/README
+```  
+
+**Результат**:  
+`Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN`
+
+</details> 
