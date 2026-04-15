@@ -618,3 +618,25 @@ git diff HEAD~1
 `4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7`
 
 </details> 
+
+## Level 30
+
+**Описание:**  
+`Репозиторий git находится по адресу ssh://bandit29-git@bandit.labs.overthewire.org/home/bandit29-git/repo через порт 2220. Пароль для пользователя bandit29-git такой же, как и для пользователя bandit29`
+
+<details>
+    <summary>Решение</summary>  
+
+```
+git clone ssh://bandit29-git@bandit.labs.overthewire.org:2220/home/bandit29-git/repo
+cd repo/
+cat README.md
+git branch -r
+git checkout dev
+cat README.md
+```  
+
+**Результат**:  
+`qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL`
+
+</details> 
