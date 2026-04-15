@@ -598,3 +598,23 @@ cat repo/README
 `Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN`
 
 </details> 
+
+## Level 29
+
+**Описание:**  
+`Репозиторий git находится по адресу ssh://bandit28-git@bandit.labs.overthewire.org/home/bandit28-git/repo через порт 2220. Пароль для пользователя bandit28-git такой же, как и для пользователя bandit28`
+
+<details>
+    <summary>Решение</summary>  
+
+```
+git clone ssh://bandit28-git@bandit.labs.overthewire.org:2220/home/bandit28-git/repo
+cd repo/
+git log --oneline
+git diff HEAD~1
+```  
+
+**Результат**:  
+`4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7`
+
+</details> 
