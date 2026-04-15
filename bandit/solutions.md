@@ -694,12 +694,39 @@ git push origin HEAD:master
 <details>
     <summary>Решение</summary>  
 
+
 ```
 $0
 cat /etc/bandit_pass/bandit33
 ```  
 
+*Решение этого уровня пришло случайно, когда я пробовал поиграть с ENV-переменными и вызвал $PWD.*
+
 **Результат**:  
 `tQdtbs5D5i2vJwkO8mEyYEyTL8izoeJ0`
+
+</details> 
+
+## Level 34
+
+**Описание:**  
+`После всех этих махинаций с git пришло время для очередного побега. Удачи!`
+
+<details>
+    <summary>Решение</summary>  
+
+```
+cat README.md
+```  
+
+**Результат**:  
+`Congratulations on solving the last level of this game!`
+
+`At this moment, there are no more levels to play in this game. However, we are constantly working
+on new levels and will most likely expand this game with more levels soon.
+Keep an eye out for an announcement on our usual communication channels!
+In the meantime, you could play some of our other wargames.`
+
+`If you have an idea for an awesome new level, please let us know!`
 
 </details> 
