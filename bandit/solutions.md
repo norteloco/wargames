@@ -640,3 +640,24 @@ cat README.md
 `qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL`
 
 </details> 
+
+## Level 31
+
+**Описание:**  
+`Репозиторий git находится по адресу ssh://bandit30-git@bandit.labs.overthewire.org/home/bandit30-git/repo через порт 2220. Пароль для пользователя bandit30-git такой же, как и для пользователя bandit30`
+
+<details>
+    <summary>Решение</summary>  
+
+```
+git clone ssh://bandit30-git@bandit.labs.overthewire.org:2220/home/bandit30-git/repo
+cd repo/
+cat README.md
+git show-ref
+git show secret
+```  
+
+**Результат**:  
+`fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy`
+
+</details> 
