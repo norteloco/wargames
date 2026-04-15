@@ -520,8 +520,8 @@ cat bandit24
 ***script.sh:***
 ```
 #!/bin/bash
-echo "$(cat /etc/bandit_pass/bandit24)" > /tmp/tmp.1EFi0VknDX/bandit24
-chmod 777 /tmp/tmp.1EFi0VknDX/bandit24
+echo "$(cat /etc/bandit_pass/bandit24)" > /tmp/<tempdir>/bandit24
+chmod 777 /tmp/<tempdir>/bandit24
 ```
 
 **Результат**:  
