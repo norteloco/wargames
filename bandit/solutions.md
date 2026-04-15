@@ -685,3 +685,21 @@ git push origin HEAD:master
 `3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K`
 
 </details> 
+
+## Level 33
+
+**Описание:**  
+`После всех этих махинаций с git пришло время для очередного побега. Удачи!`
+
+<details>
+    <summary>Решение</summary>  
+
+```
+$0
+cat /etc/bandit_pass/bandit33
+```  
+
+**Результат**:  
+`tQdtbs5D5i2vJwkO8mEyYEyTL8izoeJ0`
+
+</details> 
