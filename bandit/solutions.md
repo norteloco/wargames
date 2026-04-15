@@ -528,3 +528,22 @@ chmod 777 /tmp/<tempdir>/bandit24
 `gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8`
 
 </details> 
+
+## Level 25
+
+**Описание:**  
+`Демон-сервер прослушивает порт 30002 и выдаст вам пароль для bandit25, если вы сообщите ему пароль для bandit24 и секретный четырехзначный пин-код. Пин-код можно узнать, только перебрав все 10 000 комбинаций, то есть методом полного перебора.`
+`Вам не нужно каждый раз создавать новые соединения`
+
+<details>
+    <summary>Решение</summary>  
+
+```
+echo "$(seq -f "$(cat /etc/bandit_pass/bandit24) %04g" 0 9999)" | nc localhost 30002 | grep -v Please
+```  
+
+
+**Результат**:  
+`iCi86ttT4KSNe1armKiwbQNmB3YJP3q4`
+
+</details> 
