@@ -661,3 +661,27 @@ git show secret
 `fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy`
 
 </details> 
+
+## Level 32
+
+**Описание:**  
+`Репозиторий git находится по адресу ssh://bandit31-git@bandit.labs.overthewire.org/home/bandit31-git/repo через порт 2220. Пароль для пользователя bandit31-git такой же, как и для пользователя bandit31`
+
+<details>
+    <summary>Решение</summary>  
+
+```
+git clone ssh://bandit31-git@bandit.labs.overthewire.org:2220/home/bandit31-git/repo
+cd repo/
+cat README.md
+echo " " > .gitignore
+echo May I come in? > key.txt
+git add .
+git commit -m 'bandit32'
+git push origin HEAD:master
+```  
+
+**Результат**:  
+`3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K`
+
+</details> 
