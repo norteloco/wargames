@@ -541,9 +541,42 @@ chmod 777 /tmp/<tempdir>/bandit24
 ```
 echo "$(seq -f "$(cat /etc/bandit_pass/bandit24) %04g" 0 9999)" | nc localhost 30002 | grep -v Please
 ```  
-
+*Примечание: `grep -v Please` указано т.к. слово **Please** встречается в 2-х типах сообщений из 3-х: Сообщении о прослушивании и сообщении об ошибке.*
 
 **Результат**:  
 `iCi86ttT4KSNe1armKiwbQNmB3YJP3q4`
+
+</details> 
+
+## Level 26 & Level 27
+
+**Описание:**  
+`Войти в систему под пользователем bandit26 из системы под пользователем bandit25 должно быть довольно просто… Оболочка пользователя bandit26 — это не /bin/bash, а что-то другое. Узнайте, что это за оболочка, как она работает и как из нее выйти.`
+
+*Примечание: Я не догадался до решения самостоятельно. То ли привык использовать VS Code для подключения по SSH, то ли просто не хватило извилин мозга, но этот уровень я запомню навсегда.*
+
+<details>
+    <summary>Решение</summary>  
+
+```
+cat bandit26.sshkey
+
+Уменьшаем размер консоли до 1-2 строк и подключаемся по ssh
+ssh bandit26@bandit.labs.overthewire.org -p 2220 -i bandit26.sshkey
+Видим <--- MORE --->
+Открываем vim по нажатию на v
+:set shell=/bin/bash
+:sh
+```  
+
+*Далее мы выполняем часть уровня 27*
+
+```
+ls -la
+./bandit27-do cat /etc/bandit_pass/bandit27
+```
+
+**Результат**:  
+`upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB`
 
 </details> 
